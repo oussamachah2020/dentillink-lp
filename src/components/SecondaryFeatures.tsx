@@ -18,77 +18,7 @@ interface Feature {
   icon: React.ComponentType
 }
 
-const features: Array<Feature> = [
-  {
-    name: 'Project',
-    summary: 'Keep your projects organized',
-    description:
-      'We talked creating as many projects as you have and keep them organized.',
-    image: projectScreen,
-    icon: function ReportingIcon() {
-      let id = useId()
-      return (
-        <>
-          <defs>
-            <linearGradient
-              id={id}
-              x1="11.5"
-              y1={18}
-              x2={36}
-              y2="15.5"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset=".194" stopColor="#fff" />
-              <stop offset={1} stopColor="#6692F1" />
-            </linearGradient>
-          </defs>
-          <path
-            d="m30 15-4 5-4-11-4 18-4-11-4 7-4-5"
-            stroke={`url(#${id})`}
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </>
-      )
-    },
-  },
-  {
-    name: 'Tasks',
-    summary:
-      'Keep your team organized and the projects on track by assigning a mission to each one.',
-    description:
-      'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
-    image: TasksScreen,
-    icon: function ReportingIcon() {
-      let id = useId()
-      return (
-        <>
-          <defs>
-            <linearGradient
-              id={id}
-              x1="11.5"
-              y1={18}
-              x2={36}
-              y2="15.5"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset=".194" stopColor="#fff" />
-              <stop offset={1} stopColor="#6692F1" />
-            </linearGradient>
-          </defs>
-          <path
-            d="m30 15-4 5-4-11-4 18-4-11-4 7-4-5"
-            stroke={`url(#${id})`}
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </>
-      )
-    },
-  },
-]
+const features: Array<Feature> = []
 
 function Feature({
   feature,
@@ -218,11 +148,11 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Simplify everyday business tasks.
+            Des tâches quotidiennes simplifiées pour votre entreprise.
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Because you’d probably be a little confused if we suggested you
-            complicate your everyday business tasks instead.
+            Optimisez votre efficacité en simplifiant les tâches quotidiennes de
+            votre entreprise.
           </p>
         </div>
         <FeaturesMobile />

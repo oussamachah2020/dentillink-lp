@@ -11,19 +11,19 @@ const testimonials = [
   [
     {
       content:
-        'Harmony has completely changed the way we manage our team and projects. The seamless integration of task management and employee tracking saves us hours each week.',
+        'Dentiliik a complètement transformé la façon dont nous gérons les rendez-vous des patients et les plans de traitement. L’intégration fluide de la planification et du suivi des patients nous fait gagner des heures chaque semaine.',
       author: {
-        name: 'Sheryl Berge',
-        role: 'CEO at Lynch LLC',
+        name: 'Dr. Sheryl Berge',
+        role: 'Dentiste et propriétaire de cabinet',
         image: avatarImage1,
       },
     },
     {
       content:
-        'I used to spend so much time juggling different tools for employee scheduling and project updates. Now, with Harmony, everything’s in one place. It’s a game-changer for our productivity.',
+        'La gestion des dossiers des patients et de la facturation était toujours un casse-tête. Maintenant, avec Dentiliik, tout est centralisé, ce qui permet à notre équipe de se concentrer davantage sur les soins aux patients.',
       author: {
-        name: 'Amy Hahn',
-        role: 'Director at Velocity Industries',
+        name: 'Dr. Amy Hahn',
+        role: 'Orthodontiste et responsable de la pratique',
         image: avatarImage4,
       },
     },
@@ -31,19 +31,19 @@ const testimonials = [
   [
     {
       content:
-        'The best part about Harmony is that I can track both my projects and finances from a single dashboard. No more switching between apps to keep everything in check!',
+        'Ce que j’apprécie le plus avec Dentiliik, c’est que je peux suivre à la fois les traitements des patients et les finances depuis un tableau de bord unique. Fini de passer d’une application à l’autre pour tout gérer !',
       author: {
-        name: 'Leland Kiehn',
-        role: 'Founder of Kiehn and Sons',
+        name: 'Dr. Leland Kiehn',
+        role: 'Fondateur de Kiehn Dental Care',
         image: avatarImage5,
       },
     },
     {
       content:
-        'Before Harmony, managing employees, tasks, and finances felt chaotic. Now everything’s organized and I can actually focus on growing the business instead of just running it.',
+        'Avant Dentiliik, la gestion des rendez-vous, des traitements et de la facturation était chaotique. Maintenant, tout est rationalisé, ce qui nous permet de nous concentrer sur des soins de qualité pour nos patients.',
       author: {
-        name: 'Erin Powlowski',
-        role: 'COO at Armstrong Inc',
+        name: 'Dr. Erin Powlowski',
+        role: 'Dentiste et directeur de cabinet',
         image: avatarImage2,
       },
     },
@@ -51,25 +51,24 @@ const testimonials = [
   [
     {
       content:
-        'I used to struggle with multiple tools for payroll, scheduling, and project management. Harmony brings it all together in one platform, making life so much easier for our team.',
+        'J’avais l’habitude d’utiliser plusieurs outils pour la planification des rendez-vous, le suivi des traitements et la facturation. Dentiliik a tout réuni en une seule plateforme, ce qui facilite énormément la gestion pour notre équipe.',
       author: {
-        name: 'Peter Renolds',
-        role: 'Founder of West Inc',
+        name: 'Dr. Peter Renolds',
+        role: 'Propriétaire de Renolds Family Dentistry',
         image: avatarImage3,
       },
     },
     {
       content:
-        'Since we started using Harmony, our entire workflow has become much more efficient. From tracking employee schedules to handling projects, it’s all there in one place. I only wish we had switched sooner!',
+        'Depuis que nous utilisons Dentiliik, notre cabinet est beaucoup plus efficace. De la gestion des rendez-vous à la facturation, tout est réuni au même endroit. Nous regrettons de ne pas l’avoir adopté plus tôt !',
       author: {
-        name: 'Amy Hahn',
-        role: 'Director at Velocity Industries',
+        name: 'Dr. Amy Hahn',
+        role: 'Orthodontiste et responsable de la pratique',
         image: avatarImage4,
       },
     },
   ],
 ]
-
 
 function QuoteIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -89,12 +88,12 @@ export function Testimonials() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Loved by businesses worldwide.
+            Adopté par les cabinets dentaires du monde entier.
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Our software is so simple that people can’t help but fall in love
-            with it. Simplicity is easy when you just skip tons of
-            mission-critical features.
+            Notre logiciel est tellement simple que tout le monde en tombe
+            amoureux. La simplicité devient évidente quand on élimine les
+            fonctionnalités inutiles.
           </p>
         </div>
         <ul

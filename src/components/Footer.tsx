@@ -1,9 +1,10 @@
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
+import Logo from '@/../public/logo.svg'
 import { NavLink } from '@/components/NavLink'
 import { InfinityIcon } from 'lucide-react'
+import Image from 'next/image'
 
 export function Footer() {
   return (
@@ -11,8 +12,7 @@ export function Footer() {
       <Container>
         <div className="py-16">
           <div className="flex flex-row items-center justify-center gap-3 text-blue-600">
-            <InfinityIcon className="h-12 w-12" />
-            <span className="text-lg font-semibold">HARMONY</span>
+            <Image src={Logo} alt="logo" width={150} height={150} />
           </div>
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">

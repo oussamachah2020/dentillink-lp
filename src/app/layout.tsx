@@ -6,14 +6,14 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: 'HARMONY',
-    default: 'harmony - Management made easy for all businesses',
+    template: 'Dentiliink',
+    default: 'Dentiliink - management system for dentists',
   },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'Découvrez notre solution complète de gestion du temps et des activités, conçue pour simplifier votre quotidien. Planifiez vos rendez-vous avec précision grâce à un calendrier intuitif, suivez vos heures de travail pour toute la semaine, et maîtrisez vos finances avec des outils avancés de gestion des dépenses. Notre plateforme est idéale pour les professionnels, les entreprises et les prestataires de soins, offrant également une gestion efficace des patients pour optimiser vos services. Restez organisé, économisez du temps et améliorez votre productivité dès aujourd’hui !',
   icons: {
-    icon: '/logo.svg'
-  }
+    icon: '/logo.svg',
+  },
 }
 
 const inter = Inter({

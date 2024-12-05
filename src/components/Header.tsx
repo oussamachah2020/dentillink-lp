@@ -10,10 +10,10 @@ import {
 import clsx from 'clsx'
 import Logo from '@/../public/logo.svg'
 
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { NavLink } from '@/components/NavLink'
 import Image from 'next/image'
+import { Button } from './ui/button'
 
 function MobileNavLink({
   href,
@@ -103,10 +103,10 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <Button href="/register" color="blue">
+            <Button className="rounded-full bg-[#776AF6]">
               <span>
-                Start Your Journey{' '}
-                <span className="hidden lg:inline">today</span>
+                Commencez Dès{' '}
+                <span className="hidden lg:inline">Aujourd'hui</span>
               </span>
             </Button>
             <div className="-mr-1 md:hidden">

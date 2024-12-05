@@ -6,43 +6,41 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-features.jpg'
-import CalendarScreen from '@/images/screenshots/calendar.png'
+import CalendarScreen from '@/images/screenshots/schedules.png'
 import OverviewScreen from '@/images/screenshots/overview.png'
-import EmployeeScreen from '@/images/screenshots/employee.png'
-import JobPost from '@/images/screenshots/job-post.png'
-import Payroll from '@/images/screenshots/payroll.png'
+import WorkingHours from '@/images/screenshots/working_hours.png'
+import Patients from '@/images/screenshots/patients.png'
+import Expenses from '@/images/screenshots/expenses.png'
 
 const features = [
   {
     title: 'Overview',
-    description:
-      'Keep track of everything, for every month without missing a thing',
+    description: 'Suivez tout, mois par mois, sans rien manquer.',
     image: OverviewScreen,
   },
   {
-    title: 'Events Calendar',
+    title: 'Calendrier des rendez-vous',
     description:
-      'Stay organized and on time, track your events and attend them with ease',
+      'Planifiez vos journées, gérez vos rendez-vous, et ne manquez jamais une occasion importante."',
     image: CalendarScreen,
   },
   {
-    title: 'Employee Management',
+    title: 'Gestion des dépenses',
     description:
-      'See who works with you, the department there in too. Edit there info how you want',
-    image: EmployeeScreen,
+      'Maîtrisez vos finances, suivez vos dépenses et gardez le contrôle de votre budget facilement.',
+    image: Expenses,
   },
   {
-    title: 'Jobs',
+    title: 'Gestion des patients',
     description:
-      'Create and publish your job offers, depending on the department and the role',
-    image: JobPost,
+      'Simplifiez la gestion de vos patients, suivez leurs dossiers et optimisez vos soins.',
+    image: Patients,
   },
   {
-    title: 'Payroll',
+    title: 'Heure de travail pour toute la semaine',
     description:
-      'Manage the finances by tracking the employees salaries and other expenses',
-    image: Payroll,
+      'Planifiez et suivez vos heures de travail pour une semaine bien organisée.',
+    image: WorkingHours,
   },
 ]
 
@@ -70,16 +68,8 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your business"
-      className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32"
+      className="bg-blur-md relative overflow-hidden bg-[#776AF6] pb-28 pt-20 sm:py-32"
     >
-      <Image
-        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
-        src={backgroundImage}
-        alt=""
-        width={2245}
-        height={1636}
-        unoptimized
-      />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
@@ -146,7 +136,7 @@ export function PrimaryFeatures() {
                     </div>
                     <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                       <Image
-                        className="w-full"
+                        className="h-full w-full"
                         src={feature.image}
                         alt=""
                         priority

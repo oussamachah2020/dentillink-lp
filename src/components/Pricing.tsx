@@ -1,15 +1,18 @@
 'use client'
 import clsx from 'clsx'
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { SelectField, TextField } from './Fields'
+import { TextField } from './Fields'
 import { Controller, useForm } from 'react-hook-form'
 import { databases } from '@/utils/client'
 import { ID } from 'appwrite'
 import { useState } from 'react'
-import { ArrowRightIcon, CheckCircleIcon } from 'lucide-react'
+import { ArrowRightIcon, CalendarIcon, CheckCircleIcon } from 'lucide-react'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { Separator } from './ui/separator'
+import { Button } from './ui/button'
+import { InlineWidget } from 'react-calendly'
+import MeetingScheduler from './Calendar'
 
 function SwirlyDoodle(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -109,8 +112,7 @@ function Plan({
         ))}
       </ul>
       <Button
-        href={href}
-        variant={featured ? 'solid' : 'outline'}
+        variant={featured ? 'default' : 'outline'}
         color="white"
         className="mt-8"
         aria-label={`Get started with the ${name} plan for ${price}`}
@@ -200,20 +202,20 @@ export function Pricing() {
     <section
       id="pricing"
       aria-label="Pricing"
-      className="bg-slate-900 py-20 sm:py-32"
+      className="bg-purple-950 py-20 sm:py-32"
     >
       <Container>
         <div className="md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
-              <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
-              <span className="relative">Simple pricing,</span>
+              <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-purple-400" />
+              <span className="relative">Des prix simples,</span>
             </span>{' '}
-            for everyone.
+            accessibles à tous.
           </h2>
-          <p className="mt-4 text-lg text-slate-400">
-            It doesn’t matter what size your business is, our software won’t
-            work well for you.
+          <p className="mt-4 text-lg text-white">
+            Peu importe la taille de votre cabinet, notre logiciel est conçu
+            pour vous offrir une solution optimale.
           </p>
         </div>
         <div className="mt-10 flex flex-col items-center justify-center gap-3">
@@ -236,142 +238,127 @@ export function Pricing() {
               </p>
             </div>
           ) : (
-            <form
-              onSubmit={handleSubmit(submit)}
-              className="mt-10 flex flex-col gap-8"
-            >
-              <h2 className="text-2xl font-semibold text-white">Coming Soon</h2>
-              <p className="text-white">
-                Enter your email so we can notify you when the service is ready
-                !
+            <div>
+              <h2 className="text-2xl font-semibold text-white">
+                Demander un compte
+              </h2>
+              <p className="mt-4 text-white">
+                Êtes-vous praticien ? L'un de nos experts vous recontactera.
               </p>
-              <div className="flex h-full w-full flex-row items-center justify-between gap-3">
+              <form
+                onSubmit={handleSubmit(submit)}
+                className="mx-auto mt-10 flex max-w-lg flex-col gap-8"
+              >
+                {/* <div className="flex w-full flex-col items-center gap-3 text-white">
+                <p>Assistance</p>
+                <p>
+                  Un SAV illimité et inclus dans votre redevance d’utilisation.
+                  Disponible 6j/7 de 8h30 à 17h30.
+                </p>
+              </div> */}
+
+                <div className="flex h-full w-full flex-row items-center justify-between gap-3">
+                  <Controller
+                    name="firstName"
+                    control={control}
+                    rules={{ required: 'First name is required' }}
+                    render={({ field }) => (
+                      <div className="flex w-full flex-col gap-2">
+                        <label className="text-white">Prénom</label>
+                        <TextField
+                          {...field}
+                          label=""
+                          type="text"
+                          autoComplete="given-name"
+                          className="w-full"
+                          required
+                        />
+                        {errors && (
+                          <span className="bg-red-500">
+                            {errors.firstName?.message}
+                          </span>
+                        )}
+                      </div>
+                    )}
+                  />
+
+                  <Controller
+                    name="lastName"
+                    control={control}
+                    rules={{ required: 'Last name is required' }}
+                    render={({ field }) => (
+                      <div className="flex w-full flex-col gap-2">
+                        <label className="text-white">Nom</label>
+                        <TextField
+                          {...field}
+                          label=""
+                          type="text"
+                          className="w-full"
+                          autoComplete="family-name"
+                          required
+                        />
+                        {errors && (
+                          <span className="bg-red-500">
+                            {errors.lastName?.message}
+                          </span>
+                        )}
+                      </div>
+                    )}
+                  />
+                </div>
+
                 <Controller
-                  name="firstName"
+                  name="email"
                   control={control}
-                  rules={{ required: 'First name is required' }}
+                  rules={{
+                    required: 'Email is required',
+                    pattern: {
+                      value:
+                        /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                      message: 'Enter a valid email address',
+                    },
+                  }}
                   render={({ field }) => (
-                    <div className="flex w-full flex-col gap-2">
-                      <label className="text-white">First Name</label>
+                    <div className="flex flex-col gap-2">
+                      <label className="text-white">E-mail</label>
                       <TextField
                         {...field}
                         label=""
-                        type="text"
-                        autoComplete="given-name"
+                        type="email"
+                        autoComplete="email"
                         className="w-full"
                         required
                       />
                       {errors && (
                         <span className="bg-red-500">
-                          {errors.firstName?.message}
+                          {errors.email?.message}
                         </span>
                       )}
                     </div>
                   )}
                 />
 
-                <Controller
-                  name="lastName"
-                  control={control}
-                  rules={{ required: 'Last name is required' }}
-                  render={({ field }) => (
-                    <div className="flex w-full flex-col gap-2">
-                      <label className="text-white">Last Name</label>
-                      <TextField
-                        {...field}
-                        label=""
-                        type="text"
-                        className="w-full"
-                        autoComplete="family-name"
-                        required
-                      />
-                      {errors && (
-                        <span className="bg-red-500">
-                          {errors.lastName?.message}
-                        </span>
-                      )}
-                    </div>
-                  )}
-                />
-              </div>
-
-              <Controller
-                name="email"
-                control={control}
-                rules={{
-                  required: 'Email is required',
-                  pattern: {
-                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                    message: 'Enter a valid email address',
-                  },
-                }}
-                render={({ field }) => (
-                  <div className="flex flex-col gap-2">
-                    <label className="text-white">E-mail</label>
-                    <TextField
-                      {...field}
-                      label=""
-                      type="email"
-                      autoComplete="email"
-                      className="w-full"
-                      required
-                    />
-                    {errors && (
-                      <span className="bg-red-500">
-                        {errors.email?.message}
+                {/* Submit Button */}
+                <div className="col-span-full">
+                  <Button
+                    className={`h-12 w-full cursor-pointer rounded-full bg-purple-400 text-white ${!isValid ? 'opacity-60' : 'opacity-100'}`}
+                    type="submit"
+                    disabled={!isValid || isSubmitting}
+                  >
+                    <span className="flex items-center justify-center">
+                      Envoyer
+                      <span aria-hidden="true" className="ml-2">
+                        <ArrowRightIcon className="h-4 w-4" />
                       </span>
-                    )}
-                  </div>
-                )}
-              />
-
-              <Controller
-                name="source"
-                control={control}
-                rules={{ required: 'Source is required' }}
-                render={({ field }) => (
-                  <>
-                    <label className="text-white">
-                      How did you hear about Harmony?
-                    </label>
-                    <SelectField
-                      {...field}
-                      className="col-span-full -mt-6"
-                      label=""
-                    >
-                      <option value="">Select an option</option>
-                      <option value="search-engine">Search engine</option>
-                      <option value="social-media-ad">Social media ad</option>
-                      <option value="friend-or-colleague">
-                        Friend or colleague
-                      </option>
-                      <option value="podcast">Podcast</option>
-                    </SelectField>
-                    {errors && (
-                      <span className="bg-red-500">
-                        {errors.source?.message}
-                      </span>
-                    )}
-                  </>
-                )}
-              />
-
-              {/* Submit Button */}
-              <div className="col-span-full">
-                <button
-                  className={`h-12 w-full cursor-pointer rounded-full bg-blue-600 text-white ${!isValid ? 'opacity-60' : 'opacity-100'}`}
-                  type="submit"
-                  disabled={!isValid || isSubmitting}
-                >
-                  <span className="flex items-center justify-center">
-                    Register
-                    <span aria-hidden="true" className="ml-2">
-                      <ArrowRightIcon className="h-4 w-4" />
                     </span>
-                  </span>
-                </button>
+                  </Button>
+                </div>
+              </form>
+              <div className="mt-5 flex w-full flex-col gap-4">
+                <Separator />
+                <MeetingScheduler />
               </div>
-            </form>
+            </div>
           )}
         </div>
         {/* <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
