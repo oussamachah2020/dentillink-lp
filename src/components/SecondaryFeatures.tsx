@@ -1,14 +1,14 @@
 'use client'
 
-import { useId } from 'react'
 import Image, { type ImageProps } from 'next/image'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import TasksScreen from '@/images/screenshots/tasks.png'
-import projectScreen from '@/images/screenshots/project.png'
-// import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
+import Finances from '@/images/screenshots/finances.png'
+import Stock from '@/images/screenshots/stock.png'
+import Suppliers from '@/images/screenshots/suppliers.png'
+import { useId } from 'react'
 
 interface Feature {
   name: React.ReactNode
@@ -18,7 +18,110 @@ interface Feature {
   icon: React.ComponentType
 }
 
-const features: Array<Feature> = []
+const features: Array<Feature> = [
+  {
+    name: 'Finances',
+    summary: "Maîtrisez Vos Finances Tout au Long de l'Année",
+    description:
+      'Prenez le contrôle de vos finances annuelles en toute simplicité. Planifiez, suivez et atteignez vos objectifs grâce à des outils conçus pour simplifier votre budget et maximiser vos économies.',
+    image: Finances,
+    icon: function ReportingIcon() {
+      let id = useId()
+      return (
+        <>
+          <defs>
+            <linearGradient
+              id={id}
+              x1="11.5"
+              y1={18}
+              x2={36}
+              y2="15.5"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset=".194" stopColor="#fff" />
+              <stop offset={1} stopColor="#6692F1" />
+            </linearGradient>
+          </defs>
+          <path
+            d="m30 15-4 5-4-11-4 18-4-11-4 7-4-5"
+            stroke={`url(#${id})`}
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </>
+      )
+    },
+  },
+  {
+    name: 'Stock',
+    summary: 'Optimisez Votre Gestion du Stock',
+    description:
+      'Gardez le contrôle de votre inventaire grâce à des outils intelligents conçus pour suivre, organiser et simplifier la gestion de vos stocks avec une efficacité constante.',
+    image: Stock,
+    icon: function ReportingIcon() {
+      let id = useId()
+      return (
+        <>
+          <defs>
+            <linearGradient
+              id={id}
+              x1="11.5"
+              y1={18}
+              x2={36}
+              y2="15.5"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset=".194" stopColor="#fff" />
+              <stop offset={1} stopColor="#6692F1" />
+            </linearGradient>
+          </defs>
+          <path
+            d="m30 15-4 5-4-11-4 18-4-11-4 7-4-5"
+            stroke={`url(#${id})`}
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </>
+      )
+    },
+  },
+  {
+    name: 'Fournisseurs',
+    summary: 'Simplifiez la Gestion de Vos Fournisseurs',
+    description:
+      "Renforcez vos relations et assurez des opérations fluides grâce à des outils conçus pour organiser, suivre et optimiser vos interactions avec vos fournisseurs tout au long de l'année.",
+    image: Suppliers,
+    icon: function ReportingIcon() {
+      let id = useId()
+      return (
+        <>
+          <defs>
+            <linearGradient
+              id={id}
+              x1="11.5"
+              y1={18}
+              x2={36}
+              y2="15.5"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset=".194" stopColor="#fff" />
+              <stop offset={1} stopColor="#6692F1" />
+            </linearGradient>
+          </defs>
+          <path
+            d="m30 15-4 5-4-11-4 18-4-11-4 7-4-5"
+            stroke={`url(#${id})`}
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </>
+      )
+    },
+  },
+]
 
 function Feature({
   feature,
