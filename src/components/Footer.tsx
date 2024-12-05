@@ -24,7 +24,7 @@ export function Footer() {
         </div>
         <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
           <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} Harmony. All rights
+            Copyright &copy; {new Date().getFullYear()} Dentiliik. All rights
             reserved.
           </p>
         </div>

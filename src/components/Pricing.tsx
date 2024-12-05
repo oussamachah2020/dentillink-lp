@@ -224,7 +224,7 @@ export function Pricing() {
               <CheckCircleIcon className="h-24 w-24 text-green-400" />
               <div className="flex flex-col items-center justify-center">
                 <h2 className="text-xl text-white">
-                  Thank you for your interest in Harmony!
+                  Thank you for your interest in Dentiliik!
                 </h2>
                 <p className="font-semibold text-white">
                   Check Your e-mail box

@@ -21,11 +21,11 @@ export async function POST(req: any, res: any) {
       html: `
          <div style="font-family: 'Arial', sans-serif; max-width: 600px; margin: 0 auto; padding: 40px;">
             <div style="text-align: center; margin-bottom: 30px;">
-                <img src="https://files.edgestore.dev/4y3x2o3yt0aicqmu/publicFiles/_public/ef6066e9-2dc3-4083-b872-2c0ec3b14720.png" alt="Harmony-Logo" style="max-width: 150px;" />
+                <img src="https://files.edgestore.dev/4y3x2o3yt0aicqmu/publicFiles/_public/ef6066e9-2dc3-4083-b872-2c0ec3b14720.png" alt="Dentiliik-Logo" style="max-width: 150px;" />
             </div>
 
             <h2 style="color: #2C3E50; font-size: 22px; font-weight: 700; margin-bottom: 24px; text-align: left; border-bottom: 2px solid #E5E5E5; padding-bottom: 10px;">
-                Thank You for Your Interest in Harmony
+                Thank You for Your Interest in Dentiliik
             </h2>
 
             <p style="color: #333; font-size: 16px; margin-bottom: 20px; line-height: 1.6; text-align: left;">
@@ -33,7 +33,7 @@ export async function POST(req: any, res: any) {
             </p>
             
             <p style="color: #4D4D4D; font-size: 16px; margin-bottom: 24px; line-height: 1.6; text-align: left;">
-                Thank you for signing up to receive updates about our upcoming application. We’re working hard to finalize Harmony and are excited to have you as one of the first to discover our solution.
+                Thank you for signing up to receive updates about our upcoming application. We’re working hard to finalize Dentiliik and are excited to have you as one of the first to discover our solution.
             </p>
 
             <p style="color: #4D4D4D; font-size: 16px; margin-bottom: 24px; line-height: 1.6; text-align: left;">
@@ -41,16 +41,16 @@ export async function POST(req: any, res: any) {
             </p>
 
             <p style="color: #4D4D4D; font-size: 14px; margin-top: 30px; line-height: 1.6; text-align: left;">
-                We can’t wait to share Harmony with you and transform the way you work. Stay tuned!
+                We can’t wait to share Dentiliik with you and transform the way you work. Stay tuned!
             </p>
             
             <p style="color: #7A7A7A; font-size: 14px; margin-top: 20px; line-height: 1.5; text-align: left;">
                 Best regards,<br>
-                The Harmony Team
+                The Dentiliik Team
             </p>
 
             <p style="color: #A0A0A0; font-size: 12px; margin-top: 40px; text-align: center;">
-                © Harmony. All rights reserved. | <a href="#" style="color: #A0A0A0; text-decoration: none;">Privacy Policy</a>
+                © Dentiliik. All rights reserved. | <a href="#" style="color: #A0A0A0; text-decoration: none;">Privacy Policy</a>
             </p>
             </div>
         `,

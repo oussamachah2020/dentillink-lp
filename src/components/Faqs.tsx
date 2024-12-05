@@ -6,43 +6,43 @@ import backgroundImage from '@/images/background-faqs.jpg'
 const faqs = [
   [
     {
-      question: 'Can Harmony handle payroll and employee management?',
+      question: 'Can Dentiliik handle payroll and employee management?',
       answer:
-        'Absolutely! Harmony helps you manage employee schedules, payroll, and more, all in one platform.',
+        'Absolutely! Dentiliik helps you manage employee schedules, payroll, and more, all in one platform.',
     },
     {
-      question: 'Is my data secure on Harmony?',
+      question: 'Is my data secure on Dentiliik?',
       answer:
         'Yes, we take data security seriously with end-to-end encryption and regular security updates to ensure your business data is safe.',
     },
     {
       question: 'Can I manage multiple teams and projects?',
       answer:
-        'Yes, Harmony is designed to support multiple teams and projects, making it easy to organize and assign tasks across departments.',
+        'Yes, Dentiliik is designed to support multiple teams and projects, making it easy to organize and assign tasks across departments.',
     },
   ],
   [
     {
-      question: 'Does Harmony integrate with other tools?',
+      question: 'Does Dentiliik integrate with other tools?',
       answer:
-        'Harmony integrates with various tools including payroll systems, bank accounts, and more to streamline your business operations.',
+        'Dentiliik integrates with various tools including payroll systems, bank accounts, and more to streamline your business operations.',
     },
     {
       question: 'Is there a free trial available?',
       answer:
-        'Yes! We offer a 14-day free trial so you can experience all the features Harmony has to offer before committing to a plan.',
+        'Yes! We offer a 14-day free trial so you can experience all the features Dentiliik has to offer before committing to a plan.',
     },
     {
-      question: 'How does Harmony help with project tracking?',
+      question: 'How does Dentiliik help with project tracking?',
       answer:
-        'Harmony allows you to easily track projects from start to finish, assign tasks, set deadlines, and monitor progress in real-time.',
+        'Dentiliik allows you to easily track projects from start to finish, assign tasks, set deadlines, and monitor progress in real-time.',
     },
   ],
   [
     {
-      question: 'Can I customize reports in Harmony?',
+      question: 'Can I customize reports in Dentiliik?',
       answer:
-        'Yes, Harmony provides flexible reporting options where you can create and customize reports based on your specific business needs.',
+        'Yes, Dentiliik provides flexible reporting options where you can create and customize reports based on your specific business needs.',
     },
     {
       question: 'Is there support if I run into any issues?',
@@ -50,12 +50,12 @@ const faqs = [
         'Of course! We offer 24/7 customer support, and our team is always ready to assist you with any issues or questions you have.',
     },
     {
-      question: 'Can Harmony grow with my business?',
+      question: 'Can Dentiliik grow with my business?',
       answer:
-        "Definitely! Harmony scales with your business, whether you're managing a small team or a large enterprise, we’ve got you covered.",
+        "Definitely! Dentiliik scales with your business, whether you're managing a small team or a large enterprise, we’ve got you covered.",
     },
   ],
-];
+]
 
 
 export function Faqs() {

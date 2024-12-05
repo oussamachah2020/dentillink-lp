@@ -104,7 +104,7 @@ export default function Register() {
         <div className="flex flex-1 flex-col items-center justify-center gap-5">
           <CheckCircleIcon className="h-24 w-24 text-green-500" />
           <h2 className="text-xl font-semibold">
-            Thank you for your interest in Harmony!
+            Thank you for your interest in Dentiliik!
           </h2>
           <p className="w-[90%] text-center text-gray-500">
             Your information has been saved successfully. We'll keep you updated
@@ -119,13 +119,15 @@ export default function Register() {
               <div className="flex h-16 shrink-0 flex-row items-center gap-3">
                 <Infinity color="#3146F5" className="h-12 w-auto" />
                 <div className="flex flex-col -space-y-1">
-                  <h2 className="text-lg font-bold text-[#3146F5]">HARMONY</h2>
+                  <h2 className="text-lg font-bold text-[#3146F5]">
+                    Dentiliik
+                  </h2>
                 </div>
               </div>
             </Link>
           </div>
           <h2 className="mt-16 text-2xl font-bold text-gray-900">
-            Join us in Harmony
+            Join us in Dentiliik
           </h2>
 
           <form
@@ -194,7 +196,7 @@ export default function Register() {
                 <SelectField
                   {...field}
                   className="col-span-full"
-                  label="How did you hear about Harmony?"
+                  label="How did you hear about Dentiliik?"
                 >
                   <option value="">Select an option</option>
                   <option value="search-engine">Search engine</option>
