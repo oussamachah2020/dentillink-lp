@@ -4,14 +4,7 @@ import { InlineWidget } from 'react-calendly'
 import useIsLargeScreen from '@/hooks/useIsLargeScreen'
 import { CalendarIcon, XIcon } from 'lucide-react'
 import { Button } from './ui/button'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog'
+import { Dialog } from '@/components/ui/dialog'
 
 const MeetingScheduler = () => {
   const [isOpen, setIsOpen] = useState(false)

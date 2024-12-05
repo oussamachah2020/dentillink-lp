@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import VideoPlayer from './VideoPlayer'
+import { VideoPlayer } from './VideoPlayer'
 
 export function Hero() {
   return (
@@ -21,14 +21,18 @@ export function Hero() {
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
         Optimisez votre cabinet dentaire avec des outils pour gérer les
-        rendez-vous, les patients, les traitements et la facturation—le tout
+        rendez-vous, les patients, les traitements et la facturation le tout
         depuis une seule plateforme.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/register">Get 30 days free</Button>
+        <Button href="/register" className="w-72">
+          Get 30 days free
+        </Button>
+        {/* <VideoPlayer /> */}
+      </div>
+      <div className="mt-10 lg:mt-44">
         <VideoPlayer />
       </div>
-      <div className="mt-36 lg:mt-44"></div>
     </Container>
   )
 }
